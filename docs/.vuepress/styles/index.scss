@@ -1,0 +1,244 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiA.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2) format('woff2');
+}
+
+:root {
+  /*BlackArch color palette */
+  --ba-black: #000000;
+  --ba-dark-gray: #1a1a1a;
+  --ba-red: #ff0000;
+  --ba-light-gray: #cccccc;
+
+/* Font settings */
+--font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+--font-family-mono: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+
+/* Font sizes */
+--font-size-xs: 0.75rem;
+--font-size-sm: 0.875rem;
+--font-size-base: 1rem;
+--font-size-lg: 1.125rem;
+--font-size-xl: 1.25rem;
+--font-size-2xl: 1.5rem;
+--font-size-3xl: 1.875rem;
+--font-size-4xl: 2.25rem;
+}
+
+/* Global Typography styles */
+body {
+  font-family: var(--font-family);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  color: var(--c-text);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family);
+  font-weight: 600;
+  line-height: 1.25;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--font-size-3xl);
+  border-bottom: 1px solid var(--c-border);
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: var(--font-size-2xl);
+}
+
+h4 {
+  font-size: var(--font-size-xl);
+}
+
+/* Code blocks */
+div[class*='language-'] {
+  pre, code {
+    font-family: var(--font-family-mono) !important;
+    font-size: var(--font-size-sm);
+    font-feature-settings: "liga" 0;
+    line-height: 1.7;
+  }
+}
+
+/* Inline code */
+code {
+  font-family: var(--font-family-mono);
+  font-size: 0.9em;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* Navigation */
+.navbar {
+  .site-name {
+    font-family: var(--font-family);
+    font-weight: 600;
+  }
+
+  .navbar-items {
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  font-size: var(--font-size-sm);
+
+  .sidebar-heading {
+    font-family: var(--font-family);
+    font-weight: 600;
+  }
+}
+
+/* Custom containers */
+.custom-container {
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin: 1rem 0;
+
+  .custom-container-title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: var(--font-size-base);
+  }
+}
+
+// Dark theme customization
+html.dark {
+  --c-bg: var(--ba-black);
+  --c-bg-light: var(--ba-dark-gray);
+  --c-text: var(--ba-light-gray);
+
+  body {
+   color: var(--c-text);
+  }
+
+  code {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Tables */
+table {
+  font-size: var(--font-size-sm);
+
+  thead {
+    font-weight: 600;
+  }
+}
+
+/* Lists */
+ul, ol {
+  padding-left: 1.25em;
+  line-height: 1.7;
+}
+
+/* Blockquotes */
+blockquote {
+  font-size:var(--font-size-base);
+  color: var(--c-text-quote);
+  border-left: 4px solid var(--c-border);
+  margin: 1rem 0;
+  padding: 0.25rem 0 0.25rem 1rem;
+
+  & > p {
+    margin: 0;
+  }
+}
+
+/* Buttons */
+.action-button {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: var(--font-size-sm);
+}
+
+/* Home page specific styles */
+.home {
+  .hero {
+    h1 {
+      font-size: var(--font-size-4xl);
+      font-weight: 700;
+    }
+
+    .description {
+      font-size: var(--font-size-xl);
+      font-weight: 400;
+    }
+  }
+
+  .features {
+    .feature {
+      h2 {
+        font-size: var(--font-size-xl);
+        font-weight: 600;
+        border-bottom: none;
+      }
+
+      p {
+        font-size: var(--font-size-base);
+      }
+    }
+  }
+}
+
+.fonts-loading {
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --font-family-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.fonts-failed {
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  --font-family-mono: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
